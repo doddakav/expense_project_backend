@@ -75,7 +75,7 @@ def view_expenses():
         "all_expenses":data
     }
 @app.get("/get_single_expense/{exp_to_update}")
-def update_expense(exp_to_update :int):
+def get_single_expense(exp_to_update :int):
     query="select * from expenses where id=%s"
     values=(exp_to_update,)
     cursor_obj.execute(query,values)
