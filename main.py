@@ -45,12 +45,7 @@ conn_obj = mysql.connector.connect(
 
 )
 
-cursor_obj = conn_obj.cursor(
-    dictionary=True
-)
-
 cursor_obj=conn_obj.cursor(dictionary=True)
-
 
 cursor_obj.execute("""CREATE TABLE  if not exists expenses (
 id INT AUTO_INCREMENT PRIMARY KEY,
