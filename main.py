@@ -1,15 +1,52 @@
 from fastapi import FastAPI
 import mysql.connector
 import streamlit as st
+import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app=FastAPI()
+app.add_middleware(
 
-conn_obj=mysql.connector.connect(
-    host=st.secrets["host"],
-    user=st.secrets["user"],
-    database=st.secrets["database"],
-    password=st.secrets["password"],
-    port=st.secrets["port"]
+    CORSMiddleware,
+
+    allow_origins=[
+        "*"
+    ],   # allow all domains
+
+    allow_credentials=True,
+
+    allow_methods=["*"],
+
+    allow_headers=["*"]
+
+)
+
+@app.get("/")
+def home():
+
+    return {
+        "message":"API working"
+    }
+
+
+conn_obj = mysql.connector.connect(
+
+    host=os.getenv("DB_HOST"),
+
+    user=os.getenv("DB_USER"),
+
+    database=os.getenv("DB_NAME"),
+
+    password=os.getenv("DB_PASSWORD"),
+
+    port=int(
+        os.getenv("DB_PORT")
+    )
+
+)
+
+cursor_obj = conn_obj.cursor(
+    dictionary=True
 )
 
 cursor_obj=conn_obj.cursor(dictionary=True)
