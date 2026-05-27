@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 import mysql.connector
-import streamlit as st
 import os
 from fastapi.middleware.cors import CORSMiddleware
 
