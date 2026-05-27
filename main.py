@@ -39,9 +39,7 @@ conn_obj = mysql.connector.connect(
 
     password=os.getenv("DB_PASSWORD"),
 
-    port=int(
-        os.getenv("DB_PORT")
-    )
+    port=int(os.getenv("DB_PORT"))
 
 )
 
