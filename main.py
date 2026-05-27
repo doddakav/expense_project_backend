@@ -51,6 +51,7 @@ amount FLOAT,
 category VARCHAR(50),
 expense_date DATE
 );""")
+conn_obj.commit()
 
 @app.post("/add_expense")
 def add_expense(expense:dict):
