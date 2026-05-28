@@ -28,7 +28,7 @@ expense_project_backend/
 ________________________________________
 Installation
 Clone Repository
-git clone https://github.com/your-username/expense_project_backend.git
+git clone https://github.com/doddakav/expense_project_backend.git
 Install Dependencies
 pip install -r requirements.txt
 ________________________________________
