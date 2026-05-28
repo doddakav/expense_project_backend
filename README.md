@@ -67,7 +67,7 @@ Sort Expenses
 GET /sort_by/{sort_type}
 ________________________________________
 Frontend Repository
-https://github.com/your-username/expense_project_frontend
+https://github.com/doddakav/expense_project_frontend
 ________________________________________
 Author
 Vinod Doddaka
