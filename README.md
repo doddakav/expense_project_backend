@@ -2,6 +2,7 @@ Expense Tracker Backend
 A FastAPI backend application for managing expenses using MySQL database.
 ________________________________________
 Features
+
 •	Add Expenses
 •	View Expenses
 •	Update Expenses
